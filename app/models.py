@@ -1,6 +1,12 @@
 import torch, torch.nn as nn
 from torchvision import models
+"""
+    CNN-based encoder that extracts visual features from images.
 
+    Uses a pretrained ResNet-50 backbone (frozen) to obtain
+    high-level visual representations, which are then projected
+    into a lower-dimensional embedding space.
+    """
 class EncoderCNN(nn.Module):
     def __init__(self, embed_dim=256):
         super().__init__()
