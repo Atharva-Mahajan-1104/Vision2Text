@@ -45,6 +45,13 @@ class Vocabulary:
             json.dump({"min_freq": self.min_freq, "word2id": self.word2id}, f)
 
     @classmethod
+     """
+    Create a Vocabulary instance from a saved JSON file.
+
+    This class method reconstructs the vocabulary by
+    restoring the original word-to-index and index-to-word
+    mappings used during training.
+    """
     def from_json(cls, path):
         with open(path, "r", encoding="utf-8") as f:
             obj = json.load(f)
