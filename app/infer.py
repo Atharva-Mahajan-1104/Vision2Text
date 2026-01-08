@@ -3,7 +3,13 @@ from PIL import Image
 from torchvision import transforms
 from models import EncoderCNN, DecoderLSTM
 from utils import Vocabulary
+"""
+    Load a saved vocabulary from a JSON file.
 
+    This function reconstructs the Vocabulary object by
+    restoring the word-to-index and index-to-word mappings
+    used during training.
+    """
 def load_vocab(path):
     with open(path, "r", encoding="utf-8") as f:
         obj = json.load(f)
