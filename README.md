@@ -105,7 +105,7 @@ Each run leaves behind a **story of learning** — not just numbers.
 ## 🚀 Training the Model
 
 ```bash
-python src/train.py \
+python src/train_model.py \
   --captions data/captions.csv \
   --images-root data \
   --outdir outputs \
@@ -125,7 +125,7 @@ python src/train.py \
 python src/infer.py \
   --checkpoint outputs/best_captioner.pt \
   --vocab outputs/vocab.json \
-  --image data/images/example1.jpg
+  --image data/images/image1.jpg
 ```
 
 The model observes the image — then responds with language it has learned.
